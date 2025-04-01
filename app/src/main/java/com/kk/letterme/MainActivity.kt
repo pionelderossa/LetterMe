@@ -22,9 +22,4 @@ class MainActivity : ComponentActivity() {
 
     }
 
-    public fun main (){
-
-        println("frest start")
-
-    }
 }
