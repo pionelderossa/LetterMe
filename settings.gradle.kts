@@ -19,6 +19,9 @@ dependencyResolutionManagement {
     }
 }
 
+
+
+
 rootProject.name = "LetterMe"
 include(":app")
  
