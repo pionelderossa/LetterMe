@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
 
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -58,9 +59,21 @@ dependencies {
     implementation(libs.androidx.activity.compose)
 
 
+//  add firebase library
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.messaging)
+
+
+
     //adding material theme
 
     implementation(platform(libs.androidx.compose.bom))
+
+    //adding viewmodel
+
+    implementation(libs.lifecycle.viewmodel.compose)
 
     implementation(libs.androidx.material3)
     implementation(libs.androidx.ui)

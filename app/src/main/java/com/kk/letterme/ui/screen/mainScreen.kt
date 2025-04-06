@@ -1,4 +1,4 @@
-package com.kk.letterme.activity
+package com.kk.letterme.ui.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -20,12 +24,17 @@ fun MainApp() {
         Modifier
             .fillMaxSize()
             .padding(all = 10.dp) // a common layout for all pages
-    LoadingPage(onclick = {}, modifier)
+
+    var shouldShowRegisterPage by rememberSaveable { mutableStateOf(false) }
+    val showRegisterPage: () -> Unit  = {shouldShowRegisterPage = !shouldShowRegisterPage}
+
+    if (shouldShowRegisterPage) RegistrationScreen()
+    else LoadingPage(modifier, onclick = showRegisterPage)
 }
 
 
 @Composable
-fun LoadingPage(onclick: () -> Unit, modifier: Modifier = Modifier) {
+fun LoadingPage(modifier: Modifier = Modifier, onclick: () -> Unit = {}) {
 
 
     Surface (

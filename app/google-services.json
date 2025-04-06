@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "399724137013",
+    "project_id": "lettermeserver",
+    "storage_bucket": "lettermeserver.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399724137013:android:d2bd6f13fe7b56ad4dbf7c",
+        "android_client_info": {
+          "package_name": "com.kk.letterme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1YUhA_AVwnvMRK0gLLCZlWqIaTG1znIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
